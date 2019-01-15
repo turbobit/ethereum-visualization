@@ -66,6 +66,9 @@ export default ({top, block, transaction, className = ''}) => (
         <div className="details__txinput">
           Input: {transaction.input.substr(0, 20)}
           {transaction.input.length > 20 && '...'}
+          <div>
+          inputString(UTF-8):{transaction.inputString}
+          </div>
         </div>
       </div>
     )}
