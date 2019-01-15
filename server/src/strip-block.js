@@ -7,6 +7,7 @@ function stripBlock(block) {
     gas: getDecimalFromHex(tx.gas),
     gasPrice: getDecimalFromHex(tx.gasPrice),
     hash: tx.hash,
+    input: `${tx.input.length > 2 ? tx.input.substr(0, 20) + '...' : tx.input}`,
     input: Buffer.from(tx.input.replace(/^0x/, ''), 'hex').toString('utf8'),
     to: tx.to,
     i: getDecimalFromHex(tx.transactionIndex),
